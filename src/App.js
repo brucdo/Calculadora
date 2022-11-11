@@ -19,11 +19,17 @@ const App = () => {
     setCurrentNumber(currentNumber.slice(0,currentNumber.length-1));
   }
 
-  const handleOnClear = () => {
+  const handleClear = () => {
     setCurrentNumber('0');
     setFirstNumber('0');
     setOperation('');
     setVisorValue('');
+  }
+
+  const handleSimpleClear = () => {
+    setCurrentNumber('0');
+    setFirstNumber('0');
+    setOperation('');
   }
 
   const handleEquals = () => {
@@ -58,7 +64,7 @@ const App = () => {
       const sum = Number(firstNumber) + Number(currentNumber);
       setCurrentNumber(String(sum));
       setVisorValue(prev => `${prev}=${sum}`);
-      setOperation('');
+      handleSimpleClear();
     }
   }
 
@@ -98,10 +104,6 @@ const App = () => {
     }
   }
 
-  // useEffect(()=>{
-  // },[])
-
-  //TODO: "setar" os valores depois de usar o igual
   //TODO: Criar tbm o modo que exibi o operador escolhido na tela, acredito que agora exibe o '0'
 
   return (
@@ -112,7 +114,7 @@ const App = () => {
           <Button label="*" onClick={handleMultNumbers} />
           <Button label="/" onClick={handleDivisionNumbers} />
           <Button label="CE" onClick={handleCancelEntry} />
-          <Button label="C" onClick={handleOnClear} />
+          <Button label="C" onClick={handleClear} />
         </Row>
         <Row>
           <Button label="7" onClick={()=> handleAddNumber('7')} />

@@ -41,6 +41,6 @@ export const VisorValue = styled.p`
   align-items: center;
   justify-content: flex-end;
   
-  font-size: 18px;
+  font-size: 24px;
   font-family: 'Roboto';
 `
