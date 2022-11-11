@@ -1,0 +1,13 @@
+const Input = ({currentNumber, visorValue}) => {
+  return (
+    <InputContainer >
+        <input disabled visorValue={visorValue} />
+        <input disabled currentNumber={currentNumber} />
+    </InputContainer>
+  );
+}
+
+export default Input;
+
+
+    <Input currentNumber={currentNumber} value={visorValue} />
