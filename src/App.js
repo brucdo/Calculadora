@@ -40,12 +40,15 @@ const App = () => {
           handleSumNumbers();
           break;
         case '-':
+          setVisorValue(prev => `${prev}${currentNumber}`);
           handleMinusNumbers();
           break;
         case '/':
+          setVisorValue(prev => `${prev}${currentNumber}`);
           handleDivisionNumbers();
           break;
         case '*':
+          setVisorValue(prev => `${prev}${currentNumber}`);
           handleMultNumbers();
           break;
         default:
@@ -73,9 +76,11 @@ const App = () => {
       setFirstNumber(String(currentNumber));
       setCurrentNumber('0');
       setOperation('-');
+      setVisorValue(`${currentNumber}-`);
     }else{
       const minus = Number(firstNumber) - Number(currentNumber);
       setCurrentNumber(String(minus));
+      setVisorValue(prev => `${prev}=${minus}`);
       setOperation('');
     }
   }
@@ -85,9 +90,11 @@ const App = () => {
       setFirstNumber(String(currentNumber));
       setCurrentNumber('0');
       setOperation('*');
+      setVisorValue(`${currentNumber}*`);
     }else{
       const mult = Number(firstNumber) * Number(currentNumber);
       setCurrentNumber(String(mult));
+      setVisorValue(prev => `${prev}=${mult}`);
       setOperation('');
     }
   }
@@ -96,10 +103,12 @@ const App = () => {
     if(firstNumber==='0'){
       setFirstNumber(String(currentNumber));
       setCurrentNumber('0');
-      setOperation('*');
+      setOperation('/');
+      setVisorValue(`${currentNumber}/`);
     }else{
       const division = Number(firstNumber) / Number(currentNumber);
       setCurrentNumber(String(division));
+      setVisorValue(prev => `${prev}=${division}`);
       setOperation('');
     }
   }
