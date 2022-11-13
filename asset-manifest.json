@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/github-page/static/js/main.fbec20c5.js",
-    "index.html": "/github-page/index.html",
-    "main.fbec20c5.js.map": "/github-page/static/js/main.fbec20c5.js.map"
+    "main.js": "/Calculadora/static/js/main.94e246d7.js",
+    "index.html": "/Calculadora/index.html",
+    "main.94e246d7.js.map": "/Calculadora/static/js/main.94e246d7.js.map"
   },
   "entrypoints": [
-    "static/js/main.fbec20c5.js"
+    "static/js/main.94e246d7.js"
   ]
 }
